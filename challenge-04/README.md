@@ -46,5 +46,7 @@
 
 
 ## Solution 
-???
+- Used Python to acheive this task
+- Used modules pandas, socket, dns.resolver, requests
+- To run `python3 get_stats.py`
 
