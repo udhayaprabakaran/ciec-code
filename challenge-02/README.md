@@ -40,7 +40,22 @@ file-prood.txt --> file read for PROD environment
 - Please provide complete written instructions on how to use your solution files. Like how to run, build, deploy.
 
 ## Solution 
-???
+- Containarizing the application
+  - Created the Dockerfile
+  - Built the docker image
+    ` cd /golang`
+    ` docker build -t server-go:1.0 --build-arg DEPLOYENV=dev `
+  - Ran the container
+    `docker run -d -p 8080:8080 server-go:1.0`
 
+- Creating Docker Compose
+   - Created docker compose file.
+   - Building docker image with docket compose
+     ` cd /golang`
+     `docker-compose build --build-arg DEPLOYENV=prod`
+   - Running Container using docker compose
+     ` docker-compose up -d `
 
+- Checking the output
+  `curl http://localhost:8080`   
 

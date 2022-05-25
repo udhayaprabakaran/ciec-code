@@ -20,4 +20,13 @@ Files provided:
 - Please provide complete written instructions on how to use your solution files. Like how to run & get to answer.
 
 ## Solution 
-???
+- Used python language to acheive this task
+- Open Terminal and Run the below command
+- `python3 ./user_wo_device.py`
+- Will return the users list without device record.
+- ```
+  Users whose device has not been recorded: Mike Dalton
+  Users whose device has not been recorded: Kayla McCarthy
+  Users whose device has not been recorded: Karen Smith   
+  Users whose device has not been recorded: Joe Johnson
+  ```

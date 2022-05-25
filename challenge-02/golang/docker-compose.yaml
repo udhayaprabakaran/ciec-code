@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - "--build-arg"
+        - "DEPLOYENV=dev"
+    container_name: goserver
+    image: server-go:1.0
+    ports:
+      - "8080:8080"
+  prometheus:
+    image: prom/prometheus:v2.22.0
+    ports:
+     - 9090:9090
+    volumes:
+      - /mnt/c/Users/udhay/ciec-code/challenge-02/golang/prometheus.yaml:/etc/prometheus/prometheus.yaml
+    

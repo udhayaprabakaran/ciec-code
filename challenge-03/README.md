@@ -25,7 +25,9 @@ Files provided:
 - Please provide complete written instructions on how to use your solution files. Like how to run & get to answer.
 
 ## Solution 
-???
+
+- Run the below command
+- `python3 ./update-json.py --env DEV --json configs/config.json --csv configs/input.csv`
 
 
 
