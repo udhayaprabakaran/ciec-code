@@ -19,13 +19,19 @@ inp_csv = pd.read_csv(in_csv)
 with open(in_json,'r') as fp:
     js = json.load(fp)
 
-ind = lambda i : 1 if(envir=='DEV') else 0
-
-for j in js[envir]:
+#ind = lambda i : 1 if(envir=='DEV') else 0
+for i, val in inp_csv.iterrows():
+    if val['ENV'] == envir:
+        js[envir]['host'] = val['host']
+        js[envir]['port'] = val['port']
+        js[envir]['dbname'] = val['dbname']
+        js[envir]['user'] = val['user']
+        js[envir]['password'] = val['password']
+'''for j in js[envir]:
     if j == 'port':
         js[envir][j] = int(inp_csv[j][ind])
     else:
-        js[envir][j] = inp_csv[j][ind]
+        js[envir][j] = inp_csv[j][ind]'''
 
 with open(in_json,'w') as fp:
     json.dump(js, fp, indent=4)            
